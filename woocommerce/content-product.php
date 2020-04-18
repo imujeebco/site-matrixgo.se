@@ -66,7 +66,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 				<div class="pr-3" style="font-size: 3.8125rem;"><?= $price_array[0] ?></div>
 				<span class="flex-column" style="font-size: 30px;margin-left: -20px;margin-top: 15px;">
 					<span class="" style="margin-bottom: -2em; display: block;"><?= isset($price_array[1]) ? $price_array[1] : '00' ?></span><br>
- 					<span class="" style="font-size: 2330px;">&nbsp;/<?= $woo_uom_output ?></span>
+ 					<span class="" style="font-size: 20px;">&nbsp;/<?= $woo_uom_output ?></span>
 				</span>
 			</div>
 
