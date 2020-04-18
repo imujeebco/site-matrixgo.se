@@ -169,68 +169,84 @@
             jQuery('.header-link-to-checkout img').css('left','10px');            
          }
 
-
-         jQuery('.current-cat-parent').click(function(event){event.stopPropagation(); return false;});
-         jQuery('.current-cat').click(function(event){event.stopPropagation(); return false;});
-
          // Category 
-/*
-         jQuery( ".cat-parent" ).click(function( event ) {
-            // event.preventDefault();
-            if (!jQuery(this).parent().parent().hasClass('current-cat-parent') || !jQuery(this).parent().parent().hasClass('current-cat')){
-               jQuery(this).children(".children").collapse('show');
-            }
-            else{
-               event.preventDefault();
-            }
-            event.stopPropagation();
-            return false;
-         });
-         jQuery( ".cat-item.cat-parent" ).click(function( event ) {
-            // event.preventDefault();
-            if (!jQuery(this).parent().parent().hasClass('current-cat-parent') || !jQuery(this).parent().parent().hasClass('current-cat')){
-               jQuery(this).children(".children.show").collapse('hide');
-            } else{
-               event.preventDefault();
-            }
-            // event.stopPropagation();
-            return false;
-         });
-*/
-         jQuery( ".cat-name" ).click(function( event ) {
-            // event.stopPropagation();
-            if (!jQuery(this).parent().parent().hasClass('current-cat-parent')){event.stopPropagation(); return false;});
-            if (!jQuery(this).parent().parent().hasClass('current-cat')){event.stopPropagation(); return false;});
 
-            if (!jQuery(this).parent().parent().hasClass('current-cat-parent'){
-               jQuery(this).children(".children").collapse('toggle');
+       
+
+         jQuery( ".cat-name" ).click(function( event ) {
+
+            if(jQuery(this).parent().parent().parent().hasClass('product-categories') && !jQuery(this).parent().parent().hasClass("current-cat")){
+               jQuery(".children").collapse('hide');
             }
-            // if (!jQuery(this).parent().parent().hasClass('current-cat-parent')){
-            //    jQuery(this).children(".children.show").collapse('hide');
-            // }
-            console.log(jQuery(this).parent().attr('href'));
-            jQuery(this).parent().trigger('click');
-            var url = jQuery(this).parent().attr('href')+"?type=json";
-            jQuery("#main").load(url);
+
             jQuery(".cat-item").removeClass("current-cat");
             jQuery(".cat-parent").removeClass("current-cat-parent");
             jQuery(this).parent().parent().addClass("current-cat");
             jQuery(this).parent().parent().parent().parent().addClass("current-cat-parent");
             jQuery(this).parent().parent().parent().parent().parent().parent().addClass("current-cat-parent");
+            console.log(jQuery(this).parent().attr('href'));
+            var url = jQuery(this).parent().attr('href')+"?type=json";
+            jQuery("#main").load(url);       
 
-            // if (!jQuery(this).parent().parent().hasClass('cat-parent')) {
-            //    event.preventDefault();
-            //    event.stopPropagation();
-            //    return false;
-            // }
-            // if (!jQuery(this).parent().parent().hasClass('current-cat-parent') || !jQuery(this).parent().parent().hasClass('current-cat')){
-            //    jQuery(this).children(".children.show").collapse('hide');
-            // } else{
-            //    event.preventDefault();
-            // }
+            // jQuery(this).parent().trigger('click');
+            jQuery(this).parent().parent().children(".children").collapse('show');
+
+            if(jQuery(this).parent().parent().hasClass('current-cat')){
+               event.preventDefault();
+               return false;
+            }
+
+            if(jQuery(this).parent().parent().hasClass('cat-parent')){
+               alert("is parent");
+            }else{
+               alert("child");
+               event.preventDefault();
+               return false;
+            }
             
-                        
+
+
+
+
+
+                
          });
+
+         // jQuery( ".cat-parent" ).click(function( event ) {
+         //    jQuery(this).children(".children").collapse('show');
+         //    event.stopPropagation(); event.preventDefault(); return false;
+         // });
+         // jQuery( ".cat-item.cat-parent" ).click(function( event ) {
+         //    jQuery(this).children(".children.show").collapse('hide');
+         //    event.stopPropagation(); event.preventDefault(); return false;
+         // });
+
+
+
+
+         // jQuery( ".cat-parent" ).click(function( event ) {
+         //    // event.preventDefault();
+         //    if (!jQuery(this).parent().parent().hasClass('current-cat-parent') || !jQuery(this).parent().parent().hasClass('current-cat')){
+         //       jQuery(this).children(".children").collapse('show');
+         //    }
+         //    else{
+         //       event.preventDefault();
+         //    }
+         //    event.stopPropagation();
+         //    return false;
+         // });
+         // jQuery( ".cat-item.cat-parent" ).click(function( event ) {
+         //    // event.preventDefault();
+         //    if (!jQuery(this).parent().parent().hasClass('current-cat-parent') || !jQuery(this).parent().parent().hasClass('current-cat')){
+         //       jQuery(this).children(".children.show").collapse('hide');
+         //    } else{
+         //       event.preventDefault();
+         //    }
+         //    // event.stopPropagation();
+         //    return false;
+         // });
+
+
          jQuery( ".product-categories a" ).addClass('nav-link'); 
 
          // all having children are collapsed by default
