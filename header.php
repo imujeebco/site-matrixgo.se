@@ -17,7 +17,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
 
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+	<!-- <script src="https://kit.fontawesome.com/57ec438711.js" crossorigin="anonymous"></script> -->
+	<link rel="stylesheet" href="<?= get_stylesheet_directory_uri() ?>/css/fontawesome-free/css/all.min.css">
+	<link rel="stylesheet" href='<?= get_stylesheet_directory_uri() ?>/css/adminlte.css'>
 	<?php wp_head(); ?>
 
 </head>
