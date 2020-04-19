@@ -442,6 +442,7 @@ nav.sidebar{
     padding: 0 0 4.375rem;
     z-index: 999;
     overflow-x: hidden;
+    height:100%;
 }
 nav.sidebar img {
     width:25px;
@@ -567,7 +568,8 @@ nav.sidebar li.cat-item.current-cat .nav-link:first-child span.cat-name{
     background:#fde3e6;
     /* content: "▾"; */
 }
-.current-cat-parent > .nav-link > .cat-name:after{
+
+.product-categories > .current-cat > .nav-link > .cat-name:after, .current-cat-parent > .nav-link > .cat-name:after{
     content: ".";
     background: url('../../../assets/icon/left-arrow.png');
     background-size: 100%;
@@ -591,6 +593,7 @@ nav.sidebar li.cat-item.current-cat .nav-link:first-child span.cat-name{
     width: 15px;
     height: 28px;
     font-size: 0px;
+    float:right;
 }
 .current-cat-parent > .children > .current-cat.cat-parent > .nav-link > .cat-name:after{
     content: ".";

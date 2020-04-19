@@ -82,7 +82,7 @@
 <style>
 
 .scrollbar {
-margin-left: 30px;
+/* margin-left: 30px; */
 float: left;
 height: 300px;
 width: 65px;
@@ -139,4 +139,4 @@ scrollbar-color: #ced6de #f1f1f1;
 					</div>
 				</div>							
 			</nav>
-			<main role="main" class="col-md-8 ml-sm-auto">
+			<main role="main" class="col-md-8">
