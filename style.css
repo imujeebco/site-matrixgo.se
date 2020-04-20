@@ -22,6 +22,8 @@ html{
     zoom: .8;
     max-width: 100%;
     overflow-x: hidden;
+    height: 100%;
+    overflow: hidden;
 }
 #page .custom-logo {
     height: 45px;
@@ -30,6 +32,10 @@ html{
 }
 #main {
     margin-top: 9px;
+    margin-right: 12px;
+    overflow-y: scroll;
+    height: calc(100vh - 10px);
+    overflow-x: hidden;
 }
 .navbar.bg-dark {
     background-color: #231f20 !important;
@@ -37,9 +43,9 @@ html{
 
 header nav img {width:24px;}
 .single-product div.product form.cart .quantity {
-float: none;
-margin: 0;
-display: inline-block;
+    float: none;
+    margin: 0;
+    display: inline-block;
 }
 
 .sticky-top {
@@ -443,6 +449,7 @@ nav.sidebar{
     z-index: 999;
     overflow-x: hidden;
     height:100%;
+    max-height: 800px;
 }
 nav.sidebar img {
     width:25px;
@@ -452,6 +459,8 @@ nav.sidebar li.nav-item .nav-link{
     font-weight: 400;
     /* max-width: 270px; */
     color: #494949;
+    padding-right: 0px;
+    margin-right: 0.35em;
 }
 nav.sidebar .nav-item.first-step{
     /* padding-left: .8125rem; */
@@ -515,6 +524,11 @@ nav.sidebar .nav-item.first-step span[data-toggle].collapsed {
     top: -30px;
     position: relative; */
 }
+/* .cat-item .nav-link{
+    pointer-events: none;
+} */
+
+
 .product-categories,.cat-item {
     /* min-width:330px; */
     padding-left: 0px;
@@ -638,3 +652,4 @@ nav.sidebar li.cat-item.current-cat .nav-link:first-child span.cat-name{
 .cat-item:hover {
     color:#d60006;
 }
+.cat-item-15{display: none;}

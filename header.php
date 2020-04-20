@@ -139,4 +139,4 @@ scrollbar-color: #ced6de #f1f1f1;
 					</div>
 				</div>							
 			</nav>
-			<main role="main" class="col-md-8">
+			<main role="main" class="col-md-10" >

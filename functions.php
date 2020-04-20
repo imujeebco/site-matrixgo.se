@@ -77,6 +77,13 @@ function bbloomer_add_cart_quantity_plus_minus() {
       });
   
       </script>
+      <style>
+      .single-product div.product form.cart .quantity {
+         float: none;
+         margin: 0;
+         display: inline-block;
+      }
+      </style>
    <?php
 }
 

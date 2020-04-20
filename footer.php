@@ -193,6 +193,9 @@
 
             if(jQuery(this).parent().parent().hasClass('current-cat')){
                event.preventDefault();
+               // jQuery(".cat-parent").removeClass("current-cat");
+
+               jQuery(this).parent().parent().children(".children").collapse('toggle');
                return false;
             }
 
@@ -211,6 +214,7 @@
 
                 
          });
+         
 
          // jQuery( ".cat-parent" ).click(function( event ) {
          //    jQuery(this).children(".children").collapse('show');
@@ -265,6 +269,11 @@
 
          
 
+         jQuery(".cat-item .nav-link").click(function( event ) {
+            event.preventDefault();
+            jQuery(this).children( ".cat-name" ).trigger('click');
+            return false;
+         });
 
          // jQuery( ".cat-item" ).click(function() {
          //    jQuery(this).collapse('toggle');
