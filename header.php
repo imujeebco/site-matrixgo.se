@@ -17,7 +17,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
 
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+	<!-- <script src="https://kit.fontawesome.com/57ec438711.js" crossorigin="anonymous"></script> -->
+	<link rel="stylesheet" href="<?= get_stylesheet_directory_uri() ?>/css/fontawesome-free/css/all.min.css">
+	<link rel="stylesheet" href='<?= get_stylesheet_directory_uri() ?>/css/adminlte.css'>
 	<?php wp_head(); ?>
 
 </head>
@@ -28,7 +31,9 @@
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
+			
 
+			
 
 			<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
 				<a href="<?= get_site_url() ?>" class="navbar-brand custom-logo-link" rel="home"><img width="770" height="132" src="<?= get_site_url() ?>/wp-content/uploads/2020/04/cropped-logo.png" class="custom-logo" alt="MATRIX SE" srcset="<?= get_site_url() ?>/wp-content/uploads/2020/04/cropped-logo.png 770w, <?= get_site_url() ?>/wp-content/uploads/2020/04/cropped-logo-300x51.png 300w, <?= get_site_url() ?>/wp-content/uploads/2020/04/cropped-logo-768x132.png 768w, <?= get_site_url() ?>/wp-content/uploads/2020/04/cropped-logo-600x103.png 600w, <?= get_site_url() ?>/wp-content/uploads/2020/04/cropped-logo-64x11.png 64w" sizes="(max-width: 770px) 100vw, 770px"></a>
